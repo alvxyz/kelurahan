@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="col-md-12">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                        <!-- jquery validation -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h5 class="text-center mb-0">NO: 474.2</h5>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form action="{{route('keterangan-belum-menikah.review')}}" method="post" role="form">
+
+                                <input type="hidden" name="id" value="{{$auth->id}}">
+                                <div class="card-body">
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            1. NIK
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="number" name="nik" class="form-control" value=""
+                                                placeholder="Cth : 6106074107020001" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            2. Nama Lengkap
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                value="{{$auth->nama_anggota_keluarga}}"
+                                                placeholder="Cth : YULIA TATA FHEBIOLA" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            3. Tempat dan Tanggal Lahir
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="tempat_dan_tanggal_lahir"
+                                                value="{{$auth->tempat_lahir}}, {{App\Helpers\MyHelper::tglIndo(Carbon\Carbon::parse($auth->tanggal_lahir)->format('Y-m-d'))}}"
+                                                class="form-control" placeholder="Cth : Jongkong, 01-07-2002" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            4. Jenis Kelamin
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="jenis_kelamin" value="{{$auth->jenis_kelamin}}"
+                                                class="form-control" placeholder="Cth : Perempuan" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            5. Alamat
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Dusun" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="dusun" class="form-control"
+                                                        value="{{$auth->dusun->nama_dusun}}"
+                                                        placeholder="cth : Joka Mitra" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="RT/RW" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="rt_rw" class="form-control"
+                                                        value="{{$auth->rt->rt}}/{{$auth->rw->rw}}"
+                                                        placeholder="cth : 001/001" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Desa" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="desa" class="form-control"
+                                                        value="Jongkong Kanan" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Kecamatan" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="kecamatan" class="form-control"
+                                                        value="Jongkong" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Kabupaten" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="kabupaten" class="form-control"
+                                                        value="Kapuas Hulu" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            6. Status Perkawinan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="status_perkawinan" class="form-control"
+                                                placeholder="cth : Belum Kawin"
+                                                value="{{$auth->status_perkawinan->status}}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            7. Golongan Darah
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="golongan_darah" class="form-control"
+                                                placeholder="cth : B+" value="{{$auth->golongan_darah}}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            8. Agama
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="agama" class="form-control"
+                                                placeholder="cth : Islam" value="{{$auth->agama}}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            9. Pekerjaan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="pekerjaan" class="form-control"
+                                                placeholder="cth : Pelajar/Mahasiswa" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group text-center mb-0">
+                                        <div class="col-12 col-md-6">
+
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            Jongkong, <input type="date" name="tgl" value="{{date('Y-m-d')}}">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group text-center mb-5">
+                                        <div class="col-12 col-md-6">
+                                            Pemohon
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            Kepala Desa Jongkong Kanan
+                                        </div>
+                                    </div>
+                                    <div class="row form-group text-center">
+                                        <div class="col-12 col-md-6">
+                                            <input type="text" class="form-control text-center" value="Fulan bin Fulan"
+                                                readonly>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <input type="text" name="ketua" class="form-control text-center"
+                                                value="LAMUDIN" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary btn-sm">Create PDF</button>
+                                    <a href="{{route('penduduk.index.beranda')}}"
+                                        class="btn btn-default btn-sm">Back</a>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+                    <!-- right column -->
+                    <div class="col-md-6">
+
+                    </div>
+                    <!--/.col (right) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
