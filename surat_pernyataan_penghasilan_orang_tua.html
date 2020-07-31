@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>SURAT PERNYATAAN PENGHASILAN ORANGTUA</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="col-md-12">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                        <!-- jquery validation -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h5 class="text-center mb-0">SURAT PERNYATAAN PENGHASILAN ORANGTUA</h5>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form action="{{route('keterangan-belum-menikah.review')}}" method="post" role="form">
+
+                                <input type="hidden" name="id" value="">
+                                <div class="card-body">
+                                    <h5 class="mt-3 mb-4">Yang bertandatangan dibawah ini :</h5>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            1. Nama
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="nama_lengkap_ortu" class="form-control" value=""
+                                                placeholder="Cth : YULIA TATA FHEBIOLA" readonly>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            2. Jenis Kelamin
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="jenis_kelamin_ortu" value="" class="form-control"
+                                                placeholder="Cth : Perempuan" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            3. Tempat dan Tanggal Lahir
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="tempat_dan_tanggal_lahir_ortu" value=""
+                                                class="form-control" placeholder="Cth : Jongkong, 01-07-2002" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            4. Pekerjaaan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="pekerjaan_ortu" value="" class="form-control"
+                                                placeholder="Cth : Wiraswasta" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            5. Agama
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="agama_ortu" value="" class="form-control"
+                                                placeholder="Cth : Indonesia" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            6. Status Perkawinan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="status_perkawinan_ortu" value=""
+                                                class="form-control" placeholder="Cth : Menikah" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            7. NIK
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="number" name="nik_ortu" class="form-control" value=""
+                                                placeholder="Cth : 6106074107020001" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            8. Alamat Sekarang
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Dusun" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="dusun" class="form-control" value=""
+                                                        placeholder="cth : Joka Mitra" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="RT/RW" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="rt_rw" class="form-control" value=""
+                                                        placeholder="cth : 001/001" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Desa" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="desa" class="form-control"
+                                                        value="Jongkong Kanan" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Kecamatan" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="kecamatan" class="form-control"
+                                                        value="Jongkong" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Kabupaten" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="kabupaten" class="form-control"
+                                                        value="Kapuas Hulu" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <h5 class="mt-3 mb-4">Adalah benar orangtua dari calon mahasiswi :</h5>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            1. Nama
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="nama_lengkap" class="form-control" value=""
+                                                placeholder="Cth : YULIA TATA FHEBIOLA" readonly>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            2. Jenis Kelamin
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="jenis_kelamin" value="" class="form-control"
+                                                placeholder="Cth : Perempuan" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            3. Tempat dan Tanggal Lahir
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="tempat_dan_tanggal_lahir" value=""
+                                                class="form-control" placeholder="Cth : Jongkong, 01-07-2002" readonly>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            4. Agama
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="agama" value="" class="form-control"
+                                                placeholder="Cth : Indonesia" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            5. Status Perkawinan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="status_perkawinan" value="" class="form-control"
+                                                placeholder="Cth : Belum Menikah" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            6. NIK
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="number" name="nik" class="form-control" value=""
+                                                placeholder="Cth : 6106074107020001" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            7. Alamat Sekarang
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Dusun" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="dusun" class="form-control" value=""
+                                                        placeholder="cth : Joka Mitra" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="RT/RW" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="rt_rw" class="form-control" value=""
+                                                        placeholder="cth : 001/001" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Desa" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="desa" class="form-control"
+                                                        value="Jongkong Kanan" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Kecamatan" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="kecamatan" class="form-control"
+                                                        value="Jongkong" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <div class="row">
+                                                <div class="col-6 col-md-6">
+                                                    <input type="text" class="form-control" value="Kabupaten" disabled>
+                                                </div>
+                                                :
+                                                <div class="col-5 col-md-5">
+                                                    <input type="text" name="kabupaten" class="form-control"
+                                                        value="Kapuas Hulu" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            Tanggal
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="date" name="tgl" value="{{date('Y-m-d')}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            Kepala Desa Jongkong Kanan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="kepala_desa" class="form-control"
+                                                placeholder="cth : LAHMUDIN" value="" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-8 col-md-3">
+                                            Yang Membuat Pernyataan
+                                        </div>
+                                        <div class="col-4 col-md-1 text-right">
+                                            :
+                                        </div>
+                                        <div class="col-12 col-md-8">
+                                            <input type="text" name="membuat_pernyataan" class="form-control"
+                                                placeholder="cth : BADRUL" value="" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary btn-sm">Create PDF</button>
+                                    <a href="{{route('penduduk.index.beranda')}}"
+                                        class="btn btn-default btn-sm">Back</a>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+                    <!-- right column -->
+                    <div class="col-md-6">
+
+                    </div>
+                    <!--/.col (right) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
